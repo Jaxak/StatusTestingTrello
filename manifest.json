@@ -1,0 +1,28 @@
+{
+    "name":"Проблемолишатель",
+    "description":"Тренируемся в создании расширения",
+    "version":"0.1",
+    "manifest_version":2,
+    "content_scripts":[
+        {
+            "matches":["https://trello.com/*"],
+            "css": [
+                "css/style.css",
+                "css/styleCheckbox.css",
+                "css/listPop.css"
+            ],
+            "js":[
+                "js/jquery.js",
+                "js/popup.js",
+                "js/script.js"
+            ],
+            "run_at":"document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        "img/add-automation-info-button-icon.png",
+        "popupDiv.html",
+        "popupButton.html"
+    ],
+    "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
+}
