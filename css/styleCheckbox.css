@@ -1,9 +1,3 @@
-#conteinerMy, .conteinerMy{
-    height: 100%;
-    width: 100%;
-    
-}
-
 .child h3{
     font-size: 11pt;
 }
@@ -40,13 +34,19 @@
     align-items: left;
     justify-content: left;
     text-align: left;
+    width: 225px;
 }
 
 .date {
-    width: 188px;
+    width: 160px;
 }
 
 .checklisttestingprogress {
     widows: 490px;
     margin-left: 20px; 
+}
+
+.checklist-items-list-testin-status{
+    height: auto;
+    padding: 20px;
 }

@@ -22,7 +22,4 @@ function addPopupDiv() {
     $.get(chrome.runtime.getURL('popupDiv.html'), function (data) {
         $('div.window-overlay').prepend(data);
     });
-    $('div.chek').on('click', '#readyForTestingCheckbox', function () {
-        console.log('OK');
-    });
 }
