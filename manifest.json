@@ -14,8 +14,9 @@
             "js":[
                 "js/jquery.js",
                 "js/popup.js",
-                "js/script.js",
-                "js/dateExtension.js"
+                "js/dateExtension.js",
+                "js/script.js"
+                
             ],
             "run_at":"document_end"
         }
