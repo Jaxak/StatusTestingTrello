@@ -12,3 +12,26 @@
   height: 100%;
   width: 100%;
 }
+
+.child{
+  height: 100%;
+  float: left;
+}
+
+.name {
+  width: 225px;
+}
+
+.date {
+  width: 160px;
+}
+
+.checklisttestingprogress {
+  widows: 490px;
+  margin-left: 20px; 
+}
+
+.checklist-items-list-testin-status{
+  height: auto;
+  padding: 20px;
+}

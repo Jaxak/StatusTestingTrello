@@ -1,36 +1,16 @@
-function showButtonTesting() {
-    var cardId = document.URL.split("/")[4];
-    if (!$("#testStateBlock").length) {
-        addPopupButton();
-    }
-    if (!$("#modalMyPopUp").length) {
-        addPopupDiv();
-    }
-    $('div.window-sidebar').on('click', 'a.ksrjhcmgtkg', function () {
-        $('#modalMyPopUp').show();
-    });
+function AllLogicPopupButton() {
+    var button = new Vue({
+        el: '#ksrjhcmgtkg',
+        data: {
+            title: 'Поторогай меня'
+        },
+        methods: {
+            showPopUp: function () {
+                $('#modalMyPopUp').show();
+            }
+        }
+    })
 }
-
-function addPopupButton() {
-    $('div.window-sidebar').prepend('<div id="testStateBlock"class="window-module u-clearfix"></div>');
-    $.get(chrome.runtime.getURL('popupButton.html'), function (data) {
-        $('#testStateBlock').append(data);
-    });
-}
-
-function addPopupDiv() {
-    $.get(chrome.runtime.getURL('popupDiv.html'), function (data) {
-        $('div.window-overlay').prepend(data);
-    });
-}
-
-$('div.window').mouseenter(function () {
-    CheckBoxStatus("testingstatusbox1");
-    CheckBoxStatus("testingstatusbox2");
-    CheckBoxStatus("testingstatusbox3");
-    CheckBoxStatus("testingstatusbox4");
-});
-
 
 $(document).mouseup(function (e) {
     var container = $("#modalMyPopUp");
@@ -39,13 +19,10 @@ $(document).mouseup(function (e) {
     }
 });
 
-function CheckBoxStatus(idCheckbox) {
-    $("#"+idCheckbox).one('click', 'div.checklist-item-checkbox', function () {
-        $("#"+idCheckbox).toggleClass("checklist-item-state-complete");
-        getDate(idCheckbox);
-    });
+function AllLogicPopUpDiv() {
+    AllLogicStatusTesting();
 }
 
-function getDate(idCheckbox) {
-    $("input."+idCheckbox).val(getCurrentDate());
+function AllLogicStatusTesting(){
+    getCheckListActual();
 }

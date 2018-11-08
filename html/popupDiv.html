@@ -1,0 +1,45 @@
+<div id="modalMyPopUp" class="window modalMyPopUp">
+    <div id='conteinerMy'>
+        <div class="checklist-items-list checklist-items-list-testin-status">
+            <div id="readyForTesting" class="checklist-item">
+                <div v-on:click="check" id="readyForTestingCheck" class="checklist-item-checkbox enabled"><span class="icon-sm icon-check checklist-item-checkbox-check"></span></div>
+                <div class="checklist-item-details non-empty editable" attr="name">
+                    <div class="checklist-item-row current hide-on-edit name child"><span class="checklist-item-details-text markeddown">Готова к тестированию</span>
+                    </div>
+                    <div class="child date"><input class='datecheck testingstatusbox1' type="datetime-local"></div>
+                </div>
+            </div>
+        </div>
+        <div class="checklist-items-list checklist-items-list-testin-status">
+            <div id="startedTesting" class="checklist-item">
+                <div v-on:click="check" id="startedTestingCheck" class="checklist-item-checkbox enabled"><span class="icon-sm icon-check checklist-item-checkbox-check"></span></div>
+                <div class="checklist-item-details non-empty editable" attr="name">
+                    <div class="checklist-item-row current hide-on-edit name child"><span class="checklist-item-details-text markeddown">Начали тестировать</span>
+                    </div>
+                    <div class="child date"><input class='datecheck testingstatusbox1' type="datetime-local"></div>
+                </div>
+            </div>
+        </div>
+        <div class="checklist-items-list checklist-items-list-testin-status">
+            <div id="planToFinish" class="checklist-item">
+                <div v-on:click="check" id="planToFinishCheck" class="checklist-item-checkbox enabled"><span class="icon-sm icon-check checklist-item-checkbox-check"></span></div>
+                <div class="checklist-item-details non-empty editable" attr="name">
+                    <div class="checklist-item-row current hide-on-edit name child"><span class="checklist-item-details-text markeddown">Планируем закончить</span>
+                    </div>
+                    <div class="child date"><input class='datecheck testingstatusbox1' type="datetime-local"></div>
+                </div>
+            </div>
+        </div>
+        <div class="checklist-items-list checklist-items-list-testin-status">
+            <div id="finishedTesting" class="checklist-item">
+                <div v-on:click="check" id="finishedTestingCheck" class="checklist-item-checkbox enabled"><span class="icon-sm icon-check checklist-item-checkbox-check"></span></div>
+                <div class="checklist-item-details non-empty editable" attr="name">
+                    <div class="checklist-item-row current hide-on-edit name child"><span class="checklist-item-details-text markeddown">Закончили тестировать</span>
+                    </div>
+                    <div class="child date"><input class='datecheck testingstatusbox1' type="datetime-local"></div>
+                </div>
+            </div>
+        </div>
+        <button v-on:click="saved" id="savedProgress">Save</button>
+    </div>
+</div>

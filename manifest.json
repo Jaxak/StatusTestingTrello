@@ -1,5 +1,5 @@
 {
-    "name":"Проблемолишатель",
+    "name":"VueExtendTrello",
     "description":"Тренируемся в создании расширения",
     "version":"0.1",
     "manifest_version":2,
@@ -7,24 +7,22 @@
         {
             "matches":["https://trello.com/*"],
             "css": [
-                "css/style.css",
-                "css/styleCheckbox.css",
-                "css/listPop.css"
+                "css/style.css"
             ],
             "js":[
+                "js/vue.js",
                 "js/jquery.js",
+                "js/objects.js",
                 "js/popup.js",
-                "js/dateExtension.js",
                 "js/script.js"
-                
+
             ],
             "run_at":"document_end"
         }
     ],
     "web_accessible_resources": [
-        "img/add-automation-info-button-icon.png",
-        "popupDiv.html",
-        "popupButton.html"
+        "html/popupDiv.html",
+        "html/popupButton.html"
     ],
     "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
 }
