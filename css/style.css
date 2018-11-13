@@ -1,37 +1,65 @@
-#modalMyPopUp {
+#testStatistics-popup{
   position: fixed;
   top: 16%;
-  height: 300px;
+  min-height: 400px;
   width: 500px;
   z-index: 9999;
   display: none;
-  box-shadow: 0 0 30px 4px rgba(0,0,0,0.5); /* Параметры тени */
+ box-shadow: 0 0 30px 4px rgba(0,0,0,0.5);
 }
 
-#conteinerMy, .conteinerMy{
-  height: 100%;
-  width: 100%;
+#testStatistics-popup div {
+  min-height: 20px;
 }
 
-.child{
-  height: 100%;
+#testStatistics-head h3{
+  text-align: center;
+  margin: 0;
+}
+
+#testStatistics-content{
+  padding: 20px;
+}
+
+.t-navigation{
+  width: 100px;
+  height: 20px;
+  background: lightcoral;
   float: left;
 }
 
-.name {
-  width: 225px;
+.t-content{
+  max-height: 400px;
 }
 
-.date {
-  width: 160px;
+#content-review, #content-member, #content-stand, #content-autotest {
+  display: none;
 }
 
-.checklisttestingprogress {
-  widows: 490px;
-  margin-left: 20px; 
+.t-button{
+  width: 49%;
+  border: 0px;
+  margin:0;
 }
 
-.checklist-items-list-testin-status{
-  height: auto;
-  padding: 20px;
+.c-checkbox{
+  width: 10%;
+}
+
+#content-time input{
+  margin-top:0px;
+  width: 44%; 
+  margin-bottom: 0px;
+  padding: 0px;
+  margin-right: 40px;
+  float: right;
+}
+
+.c-t-children{
+  margin-left:10px;
+  float: left;
+}
+
+.c-t-str{
+  padding: 0;
 }

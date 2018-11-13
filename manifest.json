@@ -12,7 +12,7 @@
             "js":[
                 "js/vue.js",
                 "js/jquery.js",
-                "js/objects.js",
+                "js/dateExtension.js",
                 "js/popup.js",
                 "js/script.js"
 

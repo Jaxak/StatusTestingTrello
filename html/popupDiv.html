@@ -1,45 +1,80 @@
-<div id="modalMyPopUp" class="window modalMyPopUp">
-    <div id='conteinerMy'>
-        <div class="checklist-items-list checklist-items-list-testin-status">
-            <div id="readyForTesting" class="checklist-item">
-                <div v-on:click="check" id="readyForTestingCheck" class="checklist-item-checkbox enabled"><span class="icon-sm icon-check checklist-item-checkbox-check"></span></div>
-                <div class="checklist-item-details non-empty editable" attr="name">
-                    <div class="checklist-item-row current hide-on-edit name child"><span class="checklist-item-details-text markeddown">Готова к тестированию</span>
+<div id="testStatistics-popup" class="window">
+    <div id="testStatistics-navigation">
+        <div class="t-time t-navigation" v-on:click="switchPage('#content-time')"></div>
+        <div class="t-review t-navigation" v-on:click="switchPage('#content-review')"></div>
+        <div class="t-member t-navigation" v-on:click="switchPage('#content-member')"></div>
+        <div class="t-stand t-navigation" v-on:click="switchPage('#content-stand')"></div>
+        <div class="t-autotest t-navigation" v-on:click="switchPage('#content-autotest')"></div>
+    </div>
+    <div id="testStatistics-head">
+        <h3>Заголовок</h1>
+    </div>
+    <div id="testStatistics-content">
+        <div id="content-time" class="t-content">
+            <div class="checklist-items-list ui-sortable">
+                <div id="firstStepTesting" class="checklist-item">
+                    <div id="first-checkbox" class="checklist-item-checkbox enabled c-checkbox">
+                        <span v-on:click="check(firstStepTesting)" class="icon-sm icon-check checklist-item-checkbox-check"></span>
                     </div>
-                    <div class="child date"><input class='datecheck testingstatusbox1' type="datetime-local"></div>
+                    <div class="checklist-item-details non-empty" attr="name">
+                        <div class="checklist-item-row hide-on-edit c-t-str">
+                            <span class="checklist-item-details-text markeddown c-t-children">{{firstStepTesting[0].Title}}</span>
+                            <input v-model="firstStepTesting[1].Time" id="date-time-input-firstTime" class="c-t-children datepicker-select-input" type="datetime-local" >
+                        </div>
+                    </div>
+                </div>
+                <div id="secondStepTesting" class="checklist-item">
+                    <div class="checklist-item-checkbox enabled c-checkbox">
+                        <span v-on:click="check(secondStepTesting)" class="icon-sm icon-check checklist-item-checkbox-check"></span>
+                    </div>
+                    <div class="checklist-item-details non-empty" attr="name">
+                        <div class="checklist-item-row hide-on-edit c-t-str">
+                            <span class="checklist-item-details-text markeddown c-t-children">{{secondStepTesting[0].Title}}</span>
+                            <input v-model="secondStepTesting[1].Time" id="date-time-input-secondTime" class="c-t-children datepicker-select-input" type="datetime-local">
+                        </div>
+                    </div>
+                </div>
+                <div id="thirdStepTesting"  class="checklist-item">
+                    <div class="checklist-item-checkbox enabled c-checkbox">
+                        <span v-on:click="check(thirdStepTesting)" class="icon-sm icon-check checklist-item-checkbox-check"></span>
+                    </div>
+                    <div class="checklist-item-details non-empty" attr="name">
+                        <div class="checklist-item-row hide-on-edit c-t-str">
+                            <span class="checklist-item-details-text markeddown c-t-children">{{thirdStepTesting[0].Title}}</span>
+                            <input v-model="thirdStepTesting[1].Time" id="date-time-input-thirdTime" class="c-t-children datepicker-select-input" type="datetime-local">
+                            </div>
+                    </div>
+                </div>
+                <div id="fourthStepTesting"  class="checklist-item">
+                    <div class="checklist-item-checkbox enabled c-checkbox">
+                        <span v-on:click="check(fourthStepTesting)" class="icon-sm icon-check checklist-item-checkbox-check"></span>
+                    </div>
+                    <div class="checklist-item-details non-empty" attr="name">
+                        <div class="checklist-item-row hide-on-edit c-t-str">
+                            <span class="checklist-item-details-text markeddown c-t-children">{{fourthStepTesting[0].Title}}</span>
+                            <input v-model="fourthStepTesting[1].Time" id="date-time-input-fourthTime" class="c-t-children datepicker-select-input" type="datetime-local">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="checklist-items-list checklist-items-list-testin-status">
-            <div id="startedTesting" class="checklist-item">
-                <div v-on:click="check" id="startedTestingCheck" class="checklist-item-checkbox enabled"><span class="icon-sm icon-check checklist-item-checkbox-check"></span></div>
-                <div class="checklist-item-details non-empty editable" attr="name">
-                    <div class="checklist-item-row current hide-on-edit name child"><span class="checklist-item-details-text markeddown">Начали тестировать</span>
-                    </div>
-                    <div class="child date"><input class='datecheck testingstatusbox1' type="datetime-local"></div>
-                </div>
-            </div>
+        <div id="content-review" class="t-content">
+            2
         </div>
-        <div class="checklist-items-list checklist-items-list-testin-status">
-            <div id="planToFinish" class="checklist-item">
-                <div v-on:click="check" id="planToFinishCheck" class="checklist-item-checkbox enabled"><span class="icon-sm icon-check checklist-item-checkbox-check"></span></div>
-                <div class="checklist-item-details non-empty editable" attr="name">
-                    <div class="checklist-item-row current hide-on-edit name child"><span class="checklist-item-details-text markeddown">Планируем закончить</span>
-                    </div>
-                    <div class="child date"><input class='datecheck testingstatusbox1' type="datetime-local"></div>
-                </div>
-            </div>
+        <div id="content-member" class="t-content">
+            3
         </div>
-        <div class="checklist-items-list checklist-items-list-testin-status">
-            <div id="finishedTesting" class="checklist-item">
-                <div v-on:click="check" id="finishedTestingCheck" class="checklist-item-checkbox enabled"><span class="icon-sm icon-check checklist-item-checkbox-check"></span></div>
-                <div class="checklist-item-details non-empty editable" attr="name">
-                    <div class="checklist-item-row current hide-on-edit name child"><span class="checklist-item-details-text markeddown">Закончили тестировать</span>
-                    </div>
-                    <div class="child date"><input class='datecheck testingstatusbox1' type="datetime-local"></div>
-                </div>
-            </div>
+        <div id="content-stand" class="t-content">
+            4
         </div>
-        <button v-on:click="saved" id="savedProgress">Save</button>
+        <div id="content-autotest" class="t-content">
+            5
+        </div>
+    </div>
+    <div id="testStatistics-buttonsPanel">
+        <button v-on:click="saved" id="testStatistics-saved" class="t-button">Saved</button>
+        <button id="testStatistics-cancel" class="t-button">Cancel</button>
+    </div>
+    <div id="testStatistics-summary">
     </div>
 </div>
