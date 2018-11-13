@@ -4,6 +4,13 @@ $('div.window-overlay').mouseenter(function () {
     }
 });
 
+$(document).mouseup(function (e) {
+    var container = $("#testStatistics-popup");
+    if (container.has(e.target).length === 0) {
+        container.hide();
+    }
+});
+
 function showButtonTesting() {
     var cardId = document.URL.split("/")[4];
     if (!$("#testStateBlock").length) {

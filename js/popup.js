@@ -1,4 +1,3 @@
-
 function AllLogicPopupButton() {
     var button = new Vue({
         el: '#ksrjhcmgtkg',
@@ -12,13 +11,6 @@ function AllLogicPopupButton() {
         }
     })
 }
-
-$(document).mouseup(function (e) {
-    var container = $("#testStatistics-popup");
-    if (container.has(e.target).length === 0) {
-        container.hide();
-    }
-});
 
 function AllLogicPopUpDiv() {
     var testStatisticsPopup = new Vue({
