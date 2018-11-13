@@ -1,0 +1,104 @@
+<head>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/trello.css" rel="stylesheet">
+    <link href="css/background.css" rel="stylesheet">
+    <script src="js/dateExtension.js"></script>
+</head>
+
+<body>
+    <div id="testStatistics-popup" >
+        <div id="testStatistics-navigation">
+            <div class="t-time t-navigation" v-on:click="switchPage('#content-time')">
+                <img src="img/add-dates-info-button-icon.png" alt="Сроки">
+            </div>
+            <div class="t-review t-navigation" v-on:click="switchPage('#content-review')">
+                    <img src="img/add-reviewers-button-icon.png" alt="Сроки">
+            </div>
+            <div class="t-member t-navigation" v-on:click="switchPage('#content-member')">
+                <img src="img/edit-members-info-button-icon.png" alt="">
+            </div>
+            <div class="t-stand t-navigation" v-on:click="switchPage('#content-stand')">
+                <img src="img/add-test-stands-problem-button-icon.png" alt="">
+            </div>
+            <div class="t-autotest t-navigation" v-on:click="switchPage('#content-autotest')">
+                <img src="img/add-automation-info-button-icon.png" alt="">
+            </div>
+        </div>
+        <div id="testStatistics-head">
+            <h2>ПРОБЛЕМОРЕШАТЕЛЬ</h2>
+        </div>
+        <div id="testStatistics-content">
+            <div id="content-time" class="t-content">
+                <div class="checklist-items-list ui-sortable">
+                    <div id="firstStepTesting" class="checklist-item">
+                        <div id="first-checkbox" class="checklist-item-checkbox enabled c-checkbox">
+                            <span v-on:click="check(firstStepTesting)" class="icon-sm icon-check checklist-item-checkbox-check"></span>
+                        </div>
+                        <div class="checklist-item-details non-empty" attr="name">
+                            <div class="checklist-item-row hide-on-edit c-t-str">
+                                <span class="checklist-item-details-text markeddown c-t-children">{{firstStepTesting[0].Title}}</span>
+                                <input v-model="firstStepTesting[1].Time" id="date-time-input-firstTime" class="c-t-children datepicker-select-input" type="datetime-local" >
+                            </div>
+                        </div>
+                    </div>
+                    <div id="secondStepTesting" class="checklist-item">
+                        <div class="checklist-item-checkbox enabled c-checkbox">
+                            <span v-on:click="check(secondStepTesting)" class="icon-sm icon-check checklist-item-checkbox-check"></span>
+                        </div>
+                        <div class="checklist-item-details non-empty" attr="name">
+                            <div class="checklist-item-row hide-on-edit c-t-str">
+                                <span class="checklist-item-details-text markeddown c-t-children">{{secondStepTesting[0].Title}}</span>
+                                <input v-model="secondStepTesting[1].Time" id="date-time-input-secondTime" class="c-t-children datepicker-select-input" type="datetime-local">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="thirdStepTesting"  class="checklist-item">
+                        <div class="checklist-item-checkbox enabled c-checkbox">
+                            <span v-on:click="check(thirdStepTesting)" class="icon-sm icon-check checklist-item-checkbox-check"></span>
+                        </div>
+                        <div class="checklist-item-details non-empty" attr="name">
+                            <div class="checklist-item-row hide-on-edit c-t-str">
+                                <span class="checklist-item-details-text markeddown c-t-children">{{thirdStepTesting[0].Title}}</span>
+                                <input v-model="thirdStepTesting[1].Time" id="date-time-input-thirdTime" class="c-t-children datepicker-select-input" type="datetime-local">
+                                </div>
+                        </div>
+                    </div>
+                    <div id="fourthStepTesting"  class="checklist-item">
+                        <div class="checklist-item-checkbox enabled c-checkbox">
+                            <span v-on:click="check(fourthStepTesting)" class="icon-sm icon-check checklist-item-checkbox-check"></span>
+                        </div>
+                        <div class="checklist-item-details non-empty" attr="name">
+                            <div class="checklist-item-row hide-on-edit c-t-str">
+                                <span class="checklist-item-details-text markeddown c-t-children">{{fourthStepTesting[0].Title}}</span>
+                                <input v-model="fourthStepTesting[1].Time" id="date-time-input-fourthTime" class="c-t-children datepicker-select-input" type="datetime-local">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content-review" class="t-content">
+                2
+            </div>
+            <div id="content-member" class="t-content">
+                3
+            </div>
+            <div id="content-stand" class="t-content">
+                4
+            </div>
+            <div id="content-autotest" class="t-content">
+                5
+            </div>
+        </div>
+        <div id="testStatistics-buttonsPanel">
+            <button v-on:click="saved" id="testStatistics-saved" class="t-button">Saved</button>
+            <button id="testStatistics-cancel" class="t-button">Cancel</button>
+        </div>
+        <div id="testStatistics-summary">
+        </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/index.js"></script>
+    
+</body>

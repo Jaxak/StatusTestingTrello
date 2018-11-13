@@ -1,0 +1,58 @@
+#testStatistics-popup{
+    max-width: 512px;
+}
+
+#testStatistics-head h2 {
+    text-align: center;
+    padding-top: 70px;
+}
+
+#testStatistics-content{
+    padding: 20px;
+}
+
+.t-navigation{
+    width: 100px;
+    height: 50px;
+    float: left;
+}
+
+.t-navigation img {
+    margin-left:25px; 
+    height: 100%;
+}
+
+.t-content{
+    height: 400px;
+}
+
+#content-review, #content-member, #content-stand, #content-autotest {
+    display: none;
+}
+
+.t-button{
+    height: 20px;
+    width: 49%;
+}
+
+.c-checkbox{
+    width: 10%;
+}
+
+#content-time input{
+    margin-top:0px;
+    width: 43%; 
+    margin-bottom: 0px;
+    padding: 0px;
+    margin-right: 50px; 
+    float: right;
+}
+
+.c-t-children{
+    float: left;
+}
+
+.c-t-str{
+    padding: 0;
+}
+
