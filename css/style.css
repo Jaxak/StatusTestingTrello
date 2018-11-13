@@ -8,13 +8,18 @@
  box-shadow: 0 0 30px 4px rgba(0,0,0,0.5);
 }
 
+#testStatistics-navigation{
+  height: 50px;
+}
+
 #testStatistics-popup div {
   min-height: 20px;
 }
 
 #testStatistics-head h3{
-  text-align: center;
   margin: 0;
+  text-align: center;
+  padding-top: 10px 
 }
 
 #testStatistics-content{
@@ -23,9 +28,14 @@
 
 .t-navigation{
   width: 100px;
-  height: 20px;
-  background: lightcoral;
+  height: 50px;
   float: left;
+}
+
+.t-navigation img {
+  margin-top: 5%;
+  margin-left:25px; 
+  height: 95%;
 }
 
 .t-content{

@@ -1,3 +1,4 @@
+
 function AllLogicPopupButton() {
     var button = new Vue({
         el: '#ksrjhcmgtkg',
@@ -30,7 +31,6 @@ function AllLogicPopUpDiv() {
                 {StepTestingID:'#firstStepTesting'},
                 {defaultTitle: 'Готова к теситрованию'},
                 {checkStatus: false}
-            
             ],
             secondStepTesting:[
                 {Title:'Начали тестировать'},
@@ -38,8 +38,7 @@ function AllLogicPopUpDiv() {
                 {TimeInputID:'#date-time-input-secondTime'},
                 {StepTestingID:'#secondStepTesting'},
                 {defaultTitle: 'Начали тестировать'},
-                {checkStatus: false}
-            
+                {checkStatus: false},
             ],
             thirdStepTesting:[
                 {Title:'Планируем закончить'},
@@ -47,8 +46,7 @@ function AllLogicPopUpDiv() {
                 {TimeInputID:'#date-time-input-thirdTime'},
                 {StepTestingID:'#thirdStepTesting'},
                 {defaultTitle: 'Планируем закончить'},
-                {checkStatus: false}
-            
+                {checkStatus: false},
             ],
             fourthStepTesting:[
                 {Title:'Закончили тестировать'},
@@ -56,8 +54,15 @@ function AllLogicPopUpDiv() {
                 {TimeInputID:'#date-time-input-fourthTime'},
                 {StepTestingID:'#fourthStepTesting'},
                 {defaultTitle: 'Закончили тестировать'},
-                {checkStatus: false}
-            ]
+                {checkStatus: false},
+            ],
+            url:[
+                {   contentTime: `${chrome.runtime.getURL(`img/content-time.png`)}`,
+                    contentReview: `${chrome.runtime.getURL(`img/content-review.png`)}`,
+                    contentMember: `${chrome.runtime.getURL(`img/content-member.png`)}`,
+                    contentStand: `${chrome.runtime.getURL(`img/content-stand.png`)}`,
+                    contentAutotest: `${chrome.runtime.getURL(`img/content-autotest.png`)}`,
+                }]
         },
         methods: {
             switchPage: function (pageID) {
@@ -80,6 +85,7 @@ function AllLogicPopUpDiv() {
     
             },
             saved: function () {
+                console.log(this.url[0].contentReview);
                 if (this.firstStepTesting[5].checkStatus){
                     console.log(this.firstStepTesting[0].Title);
                 }

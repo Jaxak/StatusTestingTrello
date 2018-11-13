@@ -1,13 +1,23 @@
 <div id="testStatistics-popup" class="window">
     <div id="testStatistics-navigation">
-        <div class="t-time t-navigation" v-on:click="switchPage('#content-time')"></div>
-        <div class="t-review t-navigation" v-on:click="switchPage('#content-review')"></div>
-        <div class="t-member t-navigation" v-on:click="switchPage('#content-member')"></div>
-        <div class="t-stand t-navigation" v-on:click="switchPage('#content-stand')"></div>
-        <div class="t-autotest t-navigation" v-on:click="switchPage('#content-autotest')"></div>
+        <div class="t-time t-navigation" v-on:click="switchPage('#content-time')">
+            <img v-bind:src="url[0].contentTime" alt="Сроки">
+        </div>
+        <div class="t-review t-navigation" v-on:click="switchPage('#content-review')">
+                <img v-bind:src="url[0].contentReview" alt="Ревью">
+        </div>
+        <div class="t-member t-navigation" v-on:click="switchPage('#content-member')">
+            <img v-bind:src="url[0].contentMember" alt="Участники">
+        </div>
+        <div class="t-stand t-navigation" v-on:click="switchPage('#content-stand')">
+            <img v-bind:src="url[0].contentStand" alt="Тачки">
+        </div>
+        <div class="t-autotest t-navigation" v-on:click="switchPage('#content-autotest')">
+            <img v-bind:src="url[0].contentAutotest" alt="Автотесты">
+        </div>
     </div>
     <div id="testStatistics-head">
-        <h3>Заголовок</h1>
+        <h3>Заголовок</h3>
     </div>
     <div id="testStatistics-content">
         <div id="content-time" class="t-content">
